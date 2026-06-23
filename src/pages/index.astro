@@ -23,46 +23,9 @@ const latestReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.dat
                     Browse All Reviews
                 </a>
                 <a href="/about" class="bg-indigo-600 text-white border border-indigo-500 px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 transition-colors">
-                    How We Review
+                    Our Methodology
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Featured Reviews -->
-    {featuredReviews.length > 0 && (
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-end mb-10">
-                    <div>
-                        <h2 class="text-3xl font-bold text-slate-900">Featured Picks</h2>
-                        <p class="text-slate-600 mt-2">The absolute best products we've tested recently.</p>
-                    </div>
-                    <a href="/reviews" class="text-indigo-600 font-semibold hover:underline hidden sm:block">View all &rarr;</a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {featuredReviews.map(review => (
-                        <ReviewCard review={review} />
-                    ))}
-                </div>
-            </div>
-        </section>
-    )}
-
-    <!-- Latest Reviews -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-10">Latest Buying Guides</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {latestReviews.map(review => (
-                    <ReviewCard review={review} />
-                ))}
-            </div>
-            {latestReviews.length === 0 && (
-                <div class="text-center py-20 bg-white rounded-xl border border-slate-200 border-dashed">
-                    <p class="text-slate-500 text-lg">Coming soon! Our researchers are busy testing products.</p>
-                </div>
-            )}
         </div>
     </section>
 
@@ -70,14 +33,63 @@ const latestReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.dat
     <section class="py-16 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Popular Categories</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['Technology', 'Home Office', 'Keyboards', 'Budget Headphones'].map(cat => (
-                    <a href={`/categories/${cat.toLowerCase().replace(' ', '-')}`} class="bg-white p-8 rounded-xl border border-slate-200 text-center hover:border-indigo-500 transition-all hover:shadow-md group">
-                        <span class="block text-4xl mb-4 group-hover:scale-110 transition-transform">📦</span>
-                        <span class="font-bold text-slate-800">{cat}</span>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {[
+                    { name: 'Technology', icon: '💻' },
+                    { name: 'Webcams', icon: '📹' },
+                    { name: 'Keyboards', icon: '⌨️' },
+                    { name: 'Budget Headphones', icon: '🎧' },
+                    { name: 'Home Office', icon: '🏠' }
+                ].map(cat => (
+                    <a href={`/categories/${cat.name.toLowerCase().replace(' ', '-')}`} class="bg-white p-8 rounded-xl border border-slate-200 text-center hover:border-indigo-500 transition-all hover:shadow-md group">
+                        <span class="block text-4xl mb-4 group-hover:scale-110 transition-transform">{cat.icon}</span>
+                        <span class="font-bold text-slate-800">{cat.name}</span>
                     </a>
                 ))}
             </div>
+        </div>
+    </section>
+
+    <!-- Latest Reviews -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Latest Buying Guides</h2>
+                    <p class="text-slate-600 mt-2">The most recent expert comparisons and reviews.</p>
+                </div>
+                <a href="/reviews" class="text-indigo-600 font-bold hover:text-indigo-700">View all →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {latestReviews.map(review => (
+                    <ReviewCard review={review} />
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-slate-900 py-16 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Never miss a deal again.</h2>
+            <p class="text-slate-400 mb-8 text-lg">
+                Sign up for our newsletter to get our latest buying guides and exclusive affiliate discounts delivered directly to your inbox.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-3">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    class="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                    required
+                />
+                <button type="submit" class="bg-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 transition-colors">
+                    Join Now
+                </button>
+            </form>
+            <p class="text-slate-500 text-sm mt-4">
+                We respect your privacy. Unsubscribe at any time.
+            </p>
         </div>
     </section>
 </Layout>
