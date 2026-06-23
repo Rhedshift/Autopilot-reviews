@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const reviews = await getCollection('reviews');
+    return reviews.map(review => ({
+        params: { id: review.id },
+        props: { review },
+    }));
+}
+
+const { review } = Astro.props;
+const { title, description, heroImage, rating, category, affiliateLink, pros, cons, pubDate, bestFor } = review.data;
+const { Content } = await render(review);
+
+const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": title,
+    "description": description,
+    "image": heroImage,
+    "review": {
+        "@type": "Review",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": rating,
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Autopilot Reviews"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Autopilot Reviews"
+        },
+        "datePublished": pubDate.toISOString()
+    }
+};
+---
+
+<Layout title={title} description={description} image={heroImage}>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-8 text-sm text-slate-500" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li><a href="/reviews" class="hover:text-indigo-600">Reviews</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li class="font-medium text-slate-900 truncate" aria-current="page">{title}</li>
+            </ol>
+        </nav>
+
+        <header class="mb-12">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wider">
+                    {category} Review
+                </span>
+                <time datetime={pubDate.toISOString()} class="text-sm text-slate-500">
+                    {pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                {title}
+            </h1>
+
+            {bestFor && (
+                <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-8 text-green-800 font-semibold">
+                    Best For: {bestFor}
+                </div>
+            )}
+
+            <div class="flex items-center gap-4 mb-8">
+                <div class="flex items-center bg-slate-100 px-3 py-1 rounded-full">
+                    <span class="text-yellow-400 text-xl">★</span>
+                    <span class="ml-1 text-lg font-bold text-slate-800">{rating}/5</span>
+                </div>
+                <a href={affiliateLink} target="_blank" rel="nofollow sponsored" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-indigo-700 transition-colors shadow-sm">
+                    Check Price on Amazon
+                </a>
+            </div>
+
+            <img src={heroImage} alt={title} class="w-full h-[400px] object-cover rounded-2xl shadow-lg border border-slate-200" />
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                <h3 class="text-green-800 font-bold mb-4 flex items-center">
+                    <span class="mr-2">✓</span> Pros
+                </h3>
+                <ul class="space-y-2">
+                    {pros.map(pro => <li class="text-slate-700 flex items-start text-sm"><span class="text-green-500 mr-2">•</span> {pro}</li>)}
+                </ul>
+            </div>
+            <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                <h3 class="text-red-800 font-bold mb-4 flex items-center">
+                    <span class="mr-2">✗</span> Cons
+                </h3>
+                <ul class="space-y-2">
+                    {cons.map(con => <li class="text-slate-700 flex items-start text-sm"><span class="text-red-500 mr-2">•</span> {con}</li>)}
+                </ul>
+            </div>
+        </div>
+
+        <div class="prose prose-indigo prose-lg max-w-none text-slate-700 leading-relaxed">
+            <Content />
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-slate-200">
+            <div class="bg-slate-50 p-8 rounded-2xl text-center">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Final Verdict</h2>
+                <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                    After extensive testing and comparing with competitors, we believe the <strong>{title}</strong> is an excellent choice for anyone looking for reliability and performance in this category.
+                </p>
+                <a href={affiliateLink} target="_blank" rel="nofollow sponsored" class="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:scale-105">
+                    Get the Best Price &rarr;
+                </a>
+                <p class="mt-4 text-xs text-slate-400 italic">
+                    Clicking the link above supports our work through affiliate commissions.
+                </p>
+            </div>
+        </div>
+    </article>
+</Layout>

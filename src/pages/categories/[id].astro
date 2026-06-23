@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ReviewCard from '../../components/ReviewCard.astro';
+
+export async function getStaticPaths() {
+	const categories = await getCollection('categories');
+	return categories.map(category => ({
+		params: { id: category.id },
+		props: { category },
+	}));
+}
+
+const { category } = Astro.props;
+const { title, description } = category.data;
+
+const allReviews = await getCollection('reviews');
+const categoryReviews = allReviews.filter(review => review.data.category === title);
+---
+
+<Layout title={`${title} Reviews`} description={description}>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<nav class="flex mb-8 text-sm text-slate-500" aria-label="Breadcrumb">
+			<ol class="flex items-center space-x-2">
+				<li><a href="/" class="hover:text-indigo-600">Home</a></li>
+				<li><span class="mx-2">/</span></li>
+				<li class="font-medium text-slate-900" aria-current="page">{title}</li>
+			</ol>
+		</nav>
+
+		<header class="mb-12">
+			<h1 class="text-4xl font-extrabold text-slate-900 mb-4">{title} Reviews & Buying Guides</h1>
+			<p class="text-xl text-slate-600 max-w-3xl">{description}</p>
+		</header>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{categoryReviews.map(review => (
+				<ReviewCard review={review} />
+			))}
+		</div>
+
+		{categoryReviews.length === 0 && (
+			<div class="text-center py-20 bg-white rounded-xl border border-slate-200">
+				<p class="text-slate-500">We're currently working on {title} reviews. Stay tuned!</p>
+			</div>
+		)}
+	</div>
+</Layout>

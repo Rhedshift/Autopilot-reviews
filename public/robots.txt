@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://autopilot-reviews.com/sitemap-index.xml

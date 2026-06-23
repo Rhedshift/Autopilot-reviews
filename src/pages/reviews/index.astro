@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ReviewCard from '../../components/ReviewCard.astro';
+
+const allReviews = await getCollection('reviews');
+const sortedReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout title="All Product Reviews" description="Browse our complete collection of honest product reviews and buying guides.">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<header class="mb-12">
+			<h1 class="text-4xl font-extrabold text-slate-900 mb-4 text-center md:text-left">All Product Reviews</h1>
+			<p class="text-xl text-slate-600 text-center md:text-left">Expert analysis and comparisons to help you buy the right product.</p>
+		</header>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{sortedReviews.map(review => (
+				<ReviewCard review={review} />
+			))}
+		</div>
+
+		{sortedReviews.length === 0 && (
+			<div class="text-center py-20 bg-white rounded-xl border border-slate-200">
+				<p class="text-slate-500">We're currently writing new reviews. Check back soon!</p>
+			</div>
+		)}
+	</div>
+</Layout>
