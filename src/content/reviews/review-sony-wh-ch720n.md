@@ -7,7 +7,7 @@ category: "Budget Headphones"
 rating: 4.4
 pros: ["Mind-blowing comfort: Weighs only 192g", "Best-in-class microphone and voice call quality under $100", "Highly natural ANC and ambient transparency powered by Sony's V1 chip", "Industry-leading companion app with 20 levels of ambient control and EQ", "Great fast-charging capabilities (3 mins = 1 hour)"]
 cons: ["Does not fold up (earcups only rotate flat)", "Does not include any travel pouch or hard case in the box", "Plastic build feels slightly cheap/hollow to the touch", "Lacks support for high-res LDAC codec (only SBC and AAC)"]
-affiliateLink: "https://www.amazon.com/dp/B0BS1PRC4L?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0BS1PRC4L?tag=rhedshift-20"
 bestFor: "Office workers and long-wear comfort"
 featured: false
 ---

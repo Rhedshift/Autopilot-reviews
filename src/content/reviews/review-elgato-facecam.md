@@ -16,7 +16,7 @@ cons:
   - "Fixed focus means objects under 30cm will be blurry"
   - "Heavy, bulky housing better suited for monitors than laptops"
   - "Premium price point"
-affiliateLink: "https://www.amazon.com/dp/B09738CV2G?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B09738CV2G?tag=rhedshift-20"
 bestFor: "Twitch Streamers & YouTubers"
 ---
 

@@ -7,7 +7,7 @@ category: "Budget Headphones"
 rating: 4.6
 pros: ["Outstanding active noise cancellation for under $100", "Highly customizable sound with the industry's best companion app", "Sleek, modern design with a premium, comfortable fit", "Smart wearing detection (auto-pause/play)", "Exceptional battery life (40 hours with ANC on)", "High-res audio support (LDAC codec)"]
 cons: ["Sound signature is overly bass-heavy out of the box", "Only includes a soft draw-string pouch instead of a hard case", "Mainly plastic build"]
-affiliateLink: "https://www.amazon.com/dp/B0C6K6G9T6?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0C6K6G9T6?tag=rhedshift-20"
 bestFor: "The best all-rounder for most listeners"
 featured: false
 ---

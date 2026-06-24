@@ -16,7 +16,7 @@ cons:
   - "Clunky and poorly translated companion software"
   - "Entirely plastic case construction"
   - "Tall case height may require a wrist rest"
-affiliateLink: "https://www.amazon.com/dp/B09R1SSTN5?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B09R1SSTN5?tag=rhedshift-20"
 bestFor: "Budget-Conscious Typists & Students"
 featured: false
 ---

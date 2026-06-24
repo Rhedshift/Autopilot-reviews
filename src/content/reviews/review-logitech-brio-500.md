@@ -16,7 +16,7 @@ cons:
   - "Capped at 1080p resolution (no 2K/4K support)"
   - "Hardwired USB-C cable cannot be replaced"
   - "Requires Logi Tune software for advanced features"
-affiliateLink: "https://www.amazon.com/dp/B09QNCPBCP?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B09QNCPBCP?tag=rhedshift-20"
 bestFor: "Presenters & Creative Professionals"
 ---
 

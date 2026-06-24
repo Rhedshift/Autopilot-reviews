@@ -7,7 +7,7 @@ category: "Budget Headphones"
 rating: 4.6
 pros: ["Premium features at budget prices", "Competent Active Noise Cancellation", "Great battery life", "Strong companion app support"]
 cons: ["Not as effective as $300+ models", "Mostly plastic builds", "Voice calls can be hit or miss on ultra-budget models"]
-affiliateLink: "https://www.amazon.com/dp/B0C6K6G9T6?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0C6K6G9T6?tag=rhedshift-20"
 bestFor: "Budget-conscious music lovers"
 featured: true
 ---

@@ -15,7 +15,7 @@ cons:
   - "Tall case height requires a separate wrist rest"
   - "No high-speed 2.4GHz USB wireless receiver"
   - "Case is relatively heavy and bulky"
-affiliateLink: "https://www.amazon.com/dp/B0B2724N78?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0B2724N78?tag=rhedshift-20"
 bestFor: "Mac Users & Power Users"
 featured: false
 ---

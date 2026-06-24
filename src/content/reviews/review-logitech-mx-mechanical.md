@@ -15,7 +15,7 @@ cons:
   - "Expensive compared to custom options"
   - "ABS keycaps will develop a shine over time"
   - "Switches are not hot-swappable"
-affiliateLink: "https://www.amazon.com/dp/B09XS2SYV9?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B09XS2SYV9?tag=rhedshift-20"
 bestFor: "Corporate Professionals & Office Workers"
 featured: false
 ---

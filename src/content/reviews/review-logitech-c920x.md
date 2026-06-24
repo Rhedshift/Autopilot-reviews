@@ -16,7 +16,7 @@ cons:
   - "Hardwired USB-A cable (no detachable USB-C)"
   - "Fixed 78-degree field of view"
   - "Capped at 30fps"
-affiliateLink: "https://www.amazon.com/dp/B085S7WSSX?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B085S7WSSX?tag=rhedshift-20"
 bestFor: "Remote Professionals & Educators"
 ---
 

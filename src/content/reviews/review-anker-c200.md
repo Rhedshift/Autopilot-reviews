@@ -15,7 +15,7 @@ cons:
   - "Limited to 30fps (no 60fps support)"
   - "Monitor clip can feel less secure on very thick screens"
   - "Autofocus can occasionally lag during rapid movement"
-affiliateLink: "https://www.amazon.com/dp/B099K1N7HP?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B099K1N7HP?tag=rhedshift-20"
 bestFor: "Remote Workers & Home Offices"
 featured: true
 ---

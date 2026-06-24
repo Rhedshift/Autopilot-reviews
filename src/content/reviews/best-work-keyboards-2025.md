@@ -14,7 +14,7 @@ cons:
   - "Higher price point than membrane keyboards"
   - "Mechanical switches can be loud (choose wisely)"
   - "Heavier and more bulky than slim keyboards"
-affiliateLink: "https://www.amazon.com/s?k=wireless+mechanical+keyboard+work&tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/s?k=wireless+mechanical+keyboard+work&tag=rhedshift-20"
 bestFor: "Developers, Writers & Office Professionals"
 featured: true
 ---

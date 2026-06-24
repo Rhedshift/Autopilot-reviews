@@ -7,7 +7,7 @@ category: "Budget Headphones"
 rating: 4.05
 pros: ["Unbeatable value: Functional active noise cancellation for under $40", "Incredibly long battery life (up to 60 hours with ANC off)", "Highly polished companion app with custom 10-band EQ", "Foldable design with dual-device multipoint Bluetooth 5.3", "Surprising build durability and comfort for the price"]
 cons: ["Sound profile is overly muddy and bass-heavy out of the box", "Earcups are slightly small for people with larger ears", "Faint background hiss is audible when ANC is on without music playing"]
-affiliateLink: "https://www.amazon.com/dp/B0CF99G15X?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0CF99G15X?tag=rhedshift-20"
 bestFor: "Bargain hunters on a strict budget"
 featured: false
 ---

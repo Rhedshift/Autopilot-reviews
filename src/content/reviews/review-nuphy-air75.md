@@ -16,7 +16,7 @@ cons:
   - "Shorter travel distance than full-height switches"
   - "Magnetic feet can be easily misplaced"
   - "Short battery life with RGB active"
-affiliateLink: "https://www.amazon.com/dp/B0CKR4P2P2?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0CKR4P2P2?tag=rhedshift-20"
 bestFor: "Digital Nomads & Mobile Professionals"
 featured: false
 ---

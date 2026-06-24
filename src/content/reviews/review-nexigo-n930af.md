@@ -15,7 +15,7 @@ cons:
   - "Low-light performance is average (grainy video)"
   - "Built-in microphone sounds thin and tinny"
   - "Hardwired USB-A cable"
-affiliateLink: "https://www.amazon.com/dp/B088TSR6YJ?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B088TSR6YJ?tag=rhedshift-20"
 bestFor: "Students & Casual Video Calls"
 ---
 

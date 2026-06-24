@@ -7,7 +7,7 @@ category: "Budget Headphones"
 rating: 4.45
 pros: ["Best-in-class, balanced, audiophile-friendly sound profile", "Insane battery life (up to 70 hours with ANC off)", "High-quality, protective hard-shell travel case included", "Ultra-lightweight and exceptionally comfortable", "Supports high-resolution LDAC codec", "Seamless multipoint Bluetooth pairing"]
 cons: ["Noise cancellation is slightly weaker than Anker Soundcore Space One", "Microphone call quality is average in noisy environments", "Uses older Bluetooth 5.0 instead of Bluetooth 5.3"]
-affiliateLink: "https://www.amazon.com/dp/B0B739XG6C?tag=autopilotrev-20"
+affiliateLink: "https://www.amazon.com/dp/B0B739XG6C?tag=rhedshift-20"
 bestFor: "Audiophiles on a budget"
 featured: false
 ---
