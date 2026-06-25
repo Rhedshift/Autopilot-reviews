@@ -19,10 +19,10 @@ const latestReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.dat
                 We test, compare, and rank the best products in tech, home, and lifestyle so you don't have to.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="/reviews" class="bg-white text-indigo-700 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors shadow-lg">
+                <a href={`${import.meta.env.BASE_URL}/reviews`} class="bg-white text-indigo-700 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors shadow-lg">
                     Browse All Reviews
                 </a>
-                <a href="/about" class="bg-indigo-600 text-white border border-indigo-500 px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 transition-colors">
+                <a href={`${import.meta.env.BASE_URL}/about`} class="bg-indigo-600 text-white border border-indigo-500 px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 transition-colors">
                     Our Methodology
                 </a>
             </div>
@@ -41,7 +41,7 @@ const latestReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.dat
                     { name: 'Budget Headphones', icon: '🎧' },
                     { name: 'Home Office', icon: '🏠' }
                 ].map(cat => (
-                    <a href={`/categories/${cat.name.toLowerCase().replace(' ', '-')}`} class="bg-white p-8 rounded-xl border border-slate-200 text-center hover:border-indigo-500 transition-all hover:shadow-md group">
+                    <a href={`${import.meta.env.BASE_URL}/categories/${cat.name.toLowerCase().replace(' ', '-')}`} class="bg-white p-8 rounded-xl border border-slate-200 text-center hover:border-indigo-500 transition-all hover:shadow-md group">
                         <span class="block text-4xl mb-4 group-hover:scale-110 transition-transform">{cat.icon}</span>
                         <span class="font-bold text-slate-800">{cat.name}</span>
                     </a>
@@ -58,7 +58,7 @@ const latestReviews = allReviews.sort((a, b) => b.data.pubDate.valueOf() - a.dat
                     <h2 class="text-3xl font-bold text-slate-900">Latest Buying Guides</h2>
                     <p class="text-slate-600 mt-2">The most recent expert comparisons and reviews.</p>
                 </div>
-                <a href="/reviews" class="text-indigo-600 font-bold hover:text-indigo-700">View all →</a>
+                <a href={`${import.meta.env.BASE_URL}/reviews`} class="text-indigo-600 font-bold hover:text-indigo-700">View all →</a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

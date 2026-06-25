@@ -46,9 +46,9 @@ const jsonLd = {
         <!-- Breadcrumbs -->
         <nav class="flex mb-8 text-sm text-slate-500" aria-label="Breadcrumb">
             <ol class="flex items-center space-x-2">
-                <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+                <li><a href={import.meta.env.BASE_URL} class="hover:text-indigo-600">Home</a></li>
                 <li><span class="mx-2">/</span></li>
-                <li><a href="/reviews" class="hover:text-indigo-600">Reviews</a></li>
+                <li><a href={`${import.meta.env.BASE_URL}/reviews`} class="hover:text-indigo-600">Reviews</a></li>
                 <li><span class="mx-2">/</span></li>
                 <li class="font-medium text-slate-900 truncate" aria-current="page">{title}</li>
             </ol>
